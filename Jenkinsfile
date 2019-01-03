@@ -11,6 +11,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                HTTPS_PROXY = 'http://httppxgot.srv.volvo.com:8080'
+                HTTP_PROXY = 'http://httppxgot.srv.volvo.com:8080' 
+                PROXY_ENABLED = 'TRUE' 
                 sh 'npm install'
             }
         }
